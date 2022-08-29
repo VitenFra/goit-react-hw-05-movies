@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import s from './Searchbar.module.css';
 
@@ -17,7 +18,7 @@ export default function Searchbar({ onSubmit }) {
     }
 
     onSubmit(query);
-    setQuery('');
+    
   };
 
   return (
@@ -29,8 +30,6 @@ export default function Searchbar({ onSubmit }) {
       <input
         className={s.searchFormInput}
         type="text"
-        autoComplete="off"
-        autoFocus
         placeholder="Пошук фільму"
         name="query"
         value={query}
@@ -39,3 +38,7 @@ export default function Searchbar({ onSubmit }) {
     </form>
   );
 }
+
+Searchbar.propTypes = {
+  value: PropTypes.string.isRequired,
+};

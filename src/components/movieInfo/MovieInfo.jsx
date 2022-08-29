@@ -49,11 +49,11 @@ export default function MovieInfo({ movieInfo }) {
 
 MovieInfo.propTypes = {
   info: PropTypes.shape({
-    overview: PropTypes.string,
-    vote_average: PropTypes.number,
-    genres: PropTypes.array,
-    poster_path: PropTypes.string,
-    release_date: PropTypes.string,
-    original_title: PropTypes.string,
+    overview: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    genres: PropTypes.array.isRequired,
+    poster_path: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    original_title: PropTypes.string.isRequired,
   }),
 };

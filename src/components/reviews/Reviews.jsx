@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getReviews } from '../../api/Api';
+import PropTypes from 'prop-types';
 
 export default function Reviews() {
   const { id } = useParams();
@@ -32,3 +33,11 @@ export default function Reviews() {
     </div>
   );
 }
+Reviews.propTypes = {
+  reviews: PropTypes.arrayOf(
+    PropTypes.shape({
+      author: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired,
+};

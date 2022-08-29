@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { getCast } from '../../api/Api';
 import placeholder from '../../images/posterholder.jpg';
@@ -41,3 +42,12 @@ export default function Cast() {
     </div>
   );
 }
+Cast.propTypes = {
+  cast: PropTypes.arrayOf(
+    PropTypes.shape({
+      character: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      profile_path: PropTypes.string,
+    }).isRequired
+  ).isRequired,
+};
