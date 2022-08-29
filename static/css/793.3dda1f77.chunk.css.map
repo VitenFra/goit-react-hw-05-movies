@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/793.3dda1f77.chunk.css","mappings":"AAAA,yBAEE,kBAAmB,CACnB,gBAAiB,CACjB,eAAgB,CAHhB,eAIF","sources":["components/movieInfo/MovieInfo.module.css"],"sourcesContent":[".button {\r\n  padding: 5px 7px;\r\n  margin-bottom: 15px;\r\n  margin-left: 15px;\r\n  margin-top: 15px;\r\n}\r\n"],"names":[],"sourceRoot":""}
